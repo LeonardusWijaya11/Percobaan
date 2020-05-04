@@ -1,0 +1,167 @@
+/* ---------- archetypes ---------- */
+
+.bar
+  height: 50px
+  border-radius: 12px
+  margin-top: 20px
+  margin-bottom: 20px
+  line-height: 50px
+
+.message
+  display: flex
+  width: 100%
+  p
+    padding-left: 10px
+    padding-right: 10px
+
+.message-toggle
+  justify-content: flex-end
+  margin-bottom: 20px
+  opacity: .66
+  p
+    text-align: right
+    cursor: pointer
+  svg
+    width: 25px
+    height: 25px
+    cursor: pointer
+    .reset
+      transform: rotate(230deg)
+
+.message-error
+  margin-top: 20px
+  p
+    color: #e34c29
+
+.bar-button
+  display: flex
+  height: 50px
+  padding-left: 20px
+  padding-right: 20px
+  border-radius: 12px
+  color: black
+  background: #e34c29
+  cursor: pointer
+  line-height: 50px
+  overflow: hidden
+
+.bar-icon
+  position: relative
+  width: 50px
+  height: 50px
+  z-index: 100
+  svg
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 25px
+    height: 25px
+
+/* ---------- content containers ---------- */
+
+.container
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100vh
+  background: #435651
+
+.content-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  /* ---------- input block ---------- */
+
+  .input-container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-left: 20px
+    padding-right: 20px
+
+  .input-block
+    background: white
+    display: flex
+    flex-wrap: nowrap
+    button
+      border-radius: 0 12px 12px 0
+
+    input
+      flex-grow: 1
+      height: 100%
+      max-width: 180px
+      padding-right: 10px
+
+    .select-container
+      background: white
+      position: relative
+      cursor: pointer
+      display: flex
+      align-items: center
+      padding-right: 20px
+
+input, select, button
+  font-size: 16px
+  color: black
+  background: white
+  height: 100%
+
+input
+  background: white
+  text-transform: uppercase
+  .ellipsis
+    width: 180px
+
+  &::placeholder
+    text-transform: none
+
+select
+  appearance: none
+  line-height: normal
+  background: white
+  text-shadow: 0 0 0 #000
+  cursor: pointer
+  text-decoration: underline
+
+/* ---------- output block ---------- */
+
+.output-block
+  display: flex
+  width: 100%
+  flex-direction: column
+  justify-content: center
+  padding-left: 20px
+  padding-right: 20px
+  .bar-results
+    position: relative
+    display: flex
+    justify-content: flex-start
+    min-width: 500px
+    border: 2px white solid
+    .bar-results-text
+      z-index: 100
+      text-align: left
+      span
+        font-size: .75em
+    .animateAverage
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 0
+      will-change: width
+      background: white
+  button
+    margin-bottom: 50px
+    padding-right: 0
+    text-transform: uppercase
+
+input, select, button
+  font-size: 14px
+  color: black
